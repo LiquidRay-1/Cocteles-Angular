@@ -1,0 +1,19 @@
+<div *ngIf="cocktail">
+    <h1>{{ cocktail.strDrink }}</h1>
+    <img [src]="cocktail.strDrinkThumb" alt="Tommy's Margarita" />
+    <h2>Ingredientes</h2>
+    <ul>
+      <li *ngIf="cocktail.strIngredient1">
+        {{ cocktail.strMeasure1 }} {{ cocktail.strIngredient1 }}
+      </li>
+      <li *ngIf="cocktail.strIngredient2">
+        {{ cocktail.strMeasure2 }} {{ cocktail.strIngredient2 }}
+      </li>
+      <li *ngIf="cocktail.strIngredient3">
+        {{ cocktail.strMeasure3 }} {{ cocktail.strIngredient3 }}
+      </li>
+    </ul>
+    <h2>Instrucciones</h2>
+    <p>{{ cocktail.strInstructionsIT }}</p>
+  </div>
+  

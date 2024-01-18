@@ -1,0 +1,28 @@
+<div *ngIf="cocktail">
+    <h1>{{ cocktail.strDrink }}</h1>
+    <img [src]="cocktail.strDrinkThumb" alt="Blue Margarita" />
+    <h2>Ingredientes</h2>
+    <ul>
+      <li *ngIf="cocktail.strIngredient1">
+        {{ cocktail.strMeasure1 }} {{ cocktail.strIngredient1 }}
+      </li>
+      <li *ngIf="cocktail.strIngredient2">
+        {{ cocktail.strMeasure2 }} {{ cocktail.strIngredient2 }}
+      </li>
+      <li *ngIf="cocktail.strIngredient3">
+        {{ cocktail.strMeasure3 }} {{ cocktail.strIngredient3 }}
+      </li>
+      <li *ngIf="cocktail.strIngredient4">
+        {{ cocktail.strMeasure4 }} {{ cocktail.strIngredient4 }}
+      </li>
+      <li *ngIf="cocktail.strIngredient5">
+        {{ cocktail.strMeasure5 }} {{ cocktail.strIngredient5 }}
+      </li>
+      <li *ngIf="cocktail.strIngredient6">
+        {{ cocktail.strMeasure6 }} {{ cocktail.strIngredient6 }}
+      </li>
+    </ul>
+    <h2>Instrucciones</h2>
+    <p>{{ cocktail.strInstructionsIT }}</p>
+  </div>
+  
