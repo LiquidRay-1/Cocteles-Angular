@@ -15,6 +15,7 @@ export class CocktailService {
   getCocktailByName(name: string): Observable<Cocktail> {
     return this.http
       .get<{ drinks: Cocktail[] }>(this.baseUrl + name)
-      .pipe(map((res) => res.drinks[0]));
+      .pipe(map((res) => res.drinks[0])); // Devuelve un observable que emite un solo valor: el cóctel que tiene el mismo nombre que el parámetro name
+    //.pipe sirve para encadenar varias funciones que se aplican sobre un observable
   }
 }
